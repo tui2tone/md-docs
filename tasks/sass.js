@@ -24,5 +24,5 @@ gulp.task("sass", () => {
     ]))
     .pipe(concat('style.css'))
     .pipe(stripCssComments())
-    .pipe(gulp.dest('./temp/css/'))
+    .pipe(gulp.dest('temp/css/'))
 });
