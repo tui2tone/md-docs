@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    link(href='/css/vendor.css', rel='stylesheet')
+    link(href='/css/style.css', rel='stylesheet')
+  body
+    div(class='app')
+      aside(class='app-sidebar')
+        ul(class="sidebar-body")
+          each item in menu
+            li
+              a(href= item.url)= item.title
+              if item.submenu.length > 0
+                ul
+                  each subitem in item.submenu
+                    li
+                      a(href= subitem.id)= subitem.title
+
+      div(class='app-container')!= body
