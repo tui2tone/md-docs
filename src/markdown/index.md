@@ -13,6 +13,13 @@ we have a lot and components and you can customize it the way you want
 
 ## Tutorials
 
+Install CLI Tools via `npm`
+
+```
+npm install md-docs -g
+```
+
+Next Step: [Get Start](getstart.html)
 
 ## License
 

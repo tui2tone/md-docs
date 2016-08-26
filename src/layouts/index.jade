@@ -15,6 +15,6 @@ html(lang="en")
                 ul
                   each subitem in item.submenu
                     li
-                      a(href= subitem.id)= subitem.title
+                      a(href= subitem.url)= subitem.title
 
       div(class='app-container')!= body

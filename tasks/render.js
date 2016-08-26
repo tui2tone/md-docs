@@ -5,9 +5,10 @@ import data from "gulp-data";
 import jade from "gulp-jade";
 import path from "path";
 import rename from "gulp-rename";
+import fs from 'fs'
 
 gulp.task('render', () => {
-  const json = require("../temp/json/all.json")
+  const json = JSON.parse(fs.readFileSync('./temp/json/all.json', 'utf8'));
   
   for(const item of json) {
     gulp.src("src/layouts/**/*.jade")

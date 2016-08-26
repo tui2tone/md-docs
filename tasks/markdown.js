@@ -15,10 +15,13 @@ gulp.task('markdown', () => {
       smartypants: true
     }))
     .pipe(jsonTransform((data, file) => {
+      const folders = file.relative.split("/")
       return {
         ...data,
         data: html2json(data.body),
-        file: file.relative.replace(".json", ".html")
+        file: file.relative.replace(".json", ".html"),
+        folder: folders.length > 1 ? folders[0] : null ,
+        level: folders.length > 1 && folders[1] != "index.json" ? folders[0] : "root"
       };
     }))
     .pipe(concatJson("all.json"))
@@ -35,19 +38,32 @@ gulp.task('markdown', () => {
 });
 
 function getMenu(data) {
-  return _.sortBy(data.map((item) => {
-    const submenu = _.filter(item.data.child, (item) => { return item.tag == "h2" })
+  const rootMenu = _.filter(data, (item) => { return item.level == "root" })
+
+  return _.sortBy(rootMenu.map((item) => {
+    const subFolders = _.filter(data, (item) => { return item.folder == item.level })
+                        .map((sub) => {
+                          return {
+                            ...sub,
+                            index: sub.index,
+                            url: "/" + sub.file,
+                            title: sub.menu
+                          }
+                        })
+
+    // const submenu = _.filter(item.data.child, (item) => { return item.tag == "h2" })
+    //                   .map((sub) => {
+    //                     return {
+    //                       url: "/" + item.file + "#" + sub.attr.id,
+    //                       title: sub.child[0].text
+    //                     }
+    //                   })
 
     return {
       index: item.index,
       title: item.menu,
-      url: item.file,
-      submenu: submenu.map((sub) => {
-        return {
-          id: item.file + "#" + sub.attr.id,
-          title: sub.child[0].text
-        }
-      })
+      url: "/" + item.file,
+      submenu: item.level == "root" && item.folder == null ? [] : subFolders
     }
   }), (o) => { return o.index })
 }
