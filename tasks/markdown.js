@@ -1,21 +1,27 @@
 'use strict';
 
 import gulp from "gulp";
-import markdown from "gulp-markdown-to-json";
+import markdownToJSON from 'gulp-markdown-to-json';
 import concatJson from "gulp-concat-json";
 import jsonTransform from 'gulp-json-transform';
 import _ from 'underscore';
 import { html2json } from 'html2json';
+import marked from 'marked';
 
+
+function renderer(string) {
+  var md = require('markdown-it')();
+  var markdownItAttrs = require('markdown-it-attrs');
+  md.use(markdownItAttrs);
+  return md.render(string)
+}
 
 gulp.task('markdown', () => {
   return gulp.src("./src/markdown/**/*.md")
-    .pipe(markdown({
-      pedantic: true,
-      smartypants: true
-    }))
+    .pipe(markdownToJSON(renderer))
     .pipe(jsonTransform((data, file) => {
       const folders = file.relative.split("/")
+
       return {
         ...data,
         data: html2json(data.body),
