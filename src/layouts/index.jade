@@ -2,8 +2,7 @@ doctype html
 html(lang="en")
   head
     title= title
-    link(href='/css/vendor.css', rel='stylesheet')
-    link(href='/css/style.css', rel='stylesheet')
+    link(href='/assets/css/app.css', rel='stylesheet')
   body
     div(class='app container')
       aside(class='app-sidebar')
@@ -20,6 +19,3 @@ html(lang="en")
                       a(href= subitem.url)= subitem.title
 
       div(class='app-container')!= body
-
-    script(src='/js/vendor.js')
-    script(src='/js/app.js')
