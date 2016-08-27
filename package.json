@@ -15,6 +15,7 @@
     "gulp-markdown-to-json": "^1.0.0",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
+    "gulp-run": "^1.7.1",
     "gulp-sass": "^2.3.2",
     "highlight.js": "^9.6.0",
     "html2json": "^1.0.2",
@@ -24,6 +25,7 @@
     "markdown-it-attrs": "^0.6.4",
     "minimist": "^1.2.0",
     "ncp": "^2.0.0",
+    "node-cmd": "^1.1.1",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2",
     "underscore": "^1.8.3"
