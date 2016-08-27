@@ -4,12 +4,14 @@ import gulp from "gulp";
 import concat from "gulp-concat";
 
 const jsLibs = [
-  'bower_components/jquery/dist/jquery.js',
-  'bower_components/bootstrap/dist/js/bootstrap.js'
+  'node_modules/jquery/dist/jquery.js',
+  'node_modules/bootstrap/dist/js/bootstrap.js',
+  'node_modules/jquery-sticky/jquery.sticky.js'
 ]
 
 const cssLibs = [
-  'bower_components/bootstrap/dist/css/bootstrap.css'
+  'node_modules/bootstrap/dist/css/bootstrap.css',
+  'node_modules/highlight.js/styles/androidstudio.css'
 ]
 
 gulp.task('vendor', ['vendor:js', 'vendor:css']);

@@ -7,10 +7,22 @@ import jsonTransform from 'gulp-json-transform';
 import _ from 'underscore';
 import { html2json } from 'html2json';
 import marked from 'marked';
-
+import hljs from 'highlight.js';
 
 function renderer(string) {
-  var md = require('markdown-it')();
+  var md = require('markdown-it')({
+    highlight: function (str, lang) {
+      if (lang && hljs.getLanguage(lang)) {
+        try {
+          return '<pre class="hljs"><code>' +
+                 hljs.highlight(lang, str, true).value +
+                 '</code></pre>';
+        } catch (__) {}
+      }
+
+      return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+    }
+  });
   var markdownItAttrs = require('markdown-it-attrs');
   md.use(markdownItAttrs);
   return md.render(string)

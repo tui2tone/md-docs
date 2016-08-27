@@ -5,9 +5,11 @@ html(lang="en")
     link(href='/css/vendor.css', rel='stylesheet')
     link(href='/css/style.css', rel='stylesheet')
   body
-    div(class='app')
+    div(class='app container')
       aside(class='app-sidebar')
-        ul(class="sidebar-body")
+        div(class="sidebar-header")
+          div MD Docs
+        ul(class="sidebar-body sticky")
           each item in menu
             li
               a(href= item.url)= item.title
@@ -18,3 +20,6 @@ html(lang="en")
                       a(href= subitem.url)= subitem.title
 
       div(class='app-container')!= body
+
+    script(src='/js/vendor.js')
+    script(src='/js/app.js')

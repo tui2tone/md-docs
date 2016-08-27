@@ -11,10 +11,12 @@ Chia quinoa meh, you probably haven't heard of them sartorial Holowaychuk pickle
 
 ## Integrate
 
-- Ruby on rails
-- Laravel
-- Node (Express.js)
+- [![rails](http://4.bp.blogspot.com/-eX7AG_aBQo8/VHyW0NdIUUI/AAAAAAAAAAo/okfYN_6ccy0/s1600/icon.ruby.png) Ruby on rails](https://www.google.com)
+- [![rails](http://4.bp.blogspot.com/-eX7AG_aBQo8/VHyW0NdIUUI/AAAAAAAAAAo/okfYN_6ccy0/s1600/icon.ruby.png) Laravel](https://www.google.com)
+- [![rails](http://4.bp.blogspot.com/-eX7AG_aBQo8/VHyW0NdIUUI/AAAAAAAAAAo/okfYN_6ccy0/s1600/icon.ruby.png) Node (Express.js)](https://www.google.com)
 {.list}
+
+
 
 
 ```python {data=asdf}
