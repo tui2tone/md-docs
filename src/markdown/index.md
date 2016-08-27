@@ -1,6 +1,6 @@
 ---
 index: 1
-title: Markdown Docs
+title: Hello World
 menu: Welcome
 ---
 

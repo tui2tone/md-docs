@@ -20,6 +20,8 @@
     "html2json": "^1.0.2",
     "jquery": "^3.1.0",
     "jquery-sticky": "^1.0.4",
+    "markdown-it": "^7.0.1",
+    "markdown-it-attrs": "^0.6.4",
     "minimist": "^1.2.0",
     "ncp": "^2.0.0",
     "require-dir": "^0.3.0",
