@@ -1,6 +1,6 @@
 
 aside.app-sidebar
-  @include fixed($width: $sidebar-width, $left: 0, $top: 0)
+  @include absolute($width: $sidebar-width, $left: 0, $top: 0)
   @include flex($direction: column)
   height: 100% !important
   transition: all 0.3s ease
@@ -8,7 +8,8 @@ aside.app-sidebar
   box-shadow: 0 1px 1px $grey-darkest
 
   .sidebar-header
-    padding: 50px 15px
+    padding: 50px 20px
+    padding-bottom: 20px
     width: 100%
     h2
       font-size: 2em
