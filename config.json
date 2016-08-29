@@ -1,0 +1,8 @@
+{
+  "fonts": {
+    "font-awesome": "node_modules/font-awesome/fonts/**/*"
+  },
+  "css": {
+    "highlight.js": "node_modules/highlight.js/styles/**/*"
+  }
+}

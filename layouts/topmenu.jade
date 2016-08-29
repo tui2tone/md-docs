@@ -2,17 +2,17 @@ doctype html
 html(lang="en")
   head
     title= title
-    link(href='/assets/css/highlight.js/androidstudio.css', rel='stylesheet')
     link(href='/assets/css/app.css', rel='stylesheet')
+    link(href='/assets/css/highlight.js/androidstudio.css', rel='stylesheet')
   body
-    div(class='app')
+    div(class='app container')
       aside(class='app-sidebar')
         div(class="sidebar-header")
           h2 MDoc
           p Markdown Documentation
         ul(class="sidebar-body sticky")
-          each item in menuList
-            li(class= item.title == menu ? "active": "")
+          each item in menu
+            li
               a(href= item.url)= item.title
               if item.submenu.length > 0
                 ul

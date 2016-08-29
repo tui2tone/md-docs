@@ -1,13 +1,22 @@
 
 aside.app-sidebar
-  @include absolute($width: $sidebar-width, $left: 0, $top: 0)
+  @include fixed($width: $sidebar-width, $left: 0, $top: 0)
   @include flex($direction: column)
   height: 100% !important
   transition: all 0.3s ease
+  background-color: $white
+  box-shadow: 0 1px 1px $grey-darkest
 
   .sidebar-header
-    padding: 30px 15px
-    font-size: 2em
+    padding: 50px 15px
+    width: 100%
+    h2
+      font-size: 2em
+      margin-bottom: 0
+    p
+      text-indent: 0
+      margin-bottom: 0
+
 
   .sidebar-body
     @include flex($direction: column, $align: center)
@@ -24,14 +33,12 @@ aside.app-sidebar
         display: block
         padding: 10px 15px
         text-decoration: none
+        border-left: 5px solid transparent
         color: $black
-        border-radius: 2px
 
         &:hover
           background-color: $grey
           cursor: pointer
-
-
       ul
         list-style: none
         margin: 0
@@ -49,3 +56,7 @@ aside.app-sidebar
             &:hover
               background-color: $grey
               cursor: pointer
+      &.active
+        & > a
+          border-left-color: $red
+          color: $red
