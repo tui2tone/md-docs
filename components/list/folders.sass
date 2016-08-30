@@ -1,0 +1,44 @@
+ul.folders
+  list-style: none
+  padding: 10px
+  margin: 0
+  width: auto
+  border-radius: 3px
+  margin-bottom: 30px
+
+  ul
+   margin-left: 1em
+   padding-left: 1em
+   border-left: 1px dashed $red
+
+
+  li
+    @include flex($align: center)
+    color: $red
+    display: block
+    border-radius: 2px
+    padding: 0 5px
+    margin: 5px 0
+    a
+      @include flex($align: center)
+      color: $red
+      display: block
+      border-radius: 2px
+      padding: 0 5px
+      &:hover
+        text-decoration: none
+        color: $red-darkest
+
+    .fa
+      font-size: 1.2em
+      margin-right: 0.3em
+
+    &.end
+      display: none
+
+  &.fd-inverse
+    background-color: #282c34
+    ul
+      border-left: 1px dashed $white
+    li , a
+      color: $white
