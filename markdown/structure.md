@@ -1,7 +1,8 @@
 ---
-index: 3
+order: 3
 title: Structure
 menu: Structure
+icon: fa-server
 ---
 
 
@@ -51,12 +52,30 @@ contain a components that you can customize a pre-bundle components or add new o
 add markdown into this folders, one page per file.
 subfolder was allow and url of this pages will be include with folder name such as
 
-```
 
-```
+- :fa-folder-o: markdown
+  - :fa-file-o: index.md
+  - :fa-file-o: getstarted.md
+  - :fa-folder-o: api
+    - :fa-file-o: rest1.md
+    - :fa-file-o: rest2.md
+- end{.end}
+{.folders}
 
 
 #### Markdown Configuration
 
+```markdown
+---
+title:    "Title"                   (String)
+menu:     "Menu Title"              (String)  [Optional]
+order:    "Order of this pages"     (Integer) [Optional]
+layout:   "Layout files"            (String)  [Optional]
+---
 
+Content
+.
+.
+.
+```
 

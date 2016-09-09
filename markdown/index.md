@@ -1,7 +1,8 @@
 ---
-index: 1
+order: 1
 title: Hello World
 menu: Welcome
+icon: fa-book
 ---
 
 # Markdown Docs

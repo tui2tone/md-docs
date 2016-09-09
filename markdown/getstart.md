@@ -1,7 +1,8 @@
 ---
-index: 2
+order: 2
 title: Get Started on Markdown Docs
 menu: Get Started
+icon: fa-paper-plane
 ---
 
 # Get Started

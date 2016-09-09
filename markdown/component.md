@@ -1,7 +1,8 @@
 ---
-index: 4
+order: 4
 title: Component
 menu: Component
+icon: fa-cubes
 ---
 
 ### List Components

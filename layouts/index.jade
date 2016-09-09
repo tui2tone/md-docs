@@ -13,7 +13,12 @@ html(lang="en")
         ul(class="sidebar-body sticky")
           each item in menuList
             li(class= item.title == menu ? "active": "")
-              a(href= item.url)= item.title
+              if item.icon != undefined
+                a(href= item.url)
+                  i(class='fa ' + item.icon)
+                  span= item.title
+              else
+                a(href= item.url)= item.title
               if item.submenu.length > 0
                 ul
                   each subitem in item.submenu
