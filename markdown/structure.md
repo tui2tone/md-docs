@@ -2,7 +2,7 @@
 order: 3
 title: Structure
 menu: Structure
-icon: fa-server
+icon: ion-soup-can
 ---
 
 

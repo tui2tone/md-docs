@@ -2,7 +2,7 @@
 order: 4
 title: Component
 menu: Component
-icon: fa-cubes
+icon: ion-cube
 ---
 
 ### List Components

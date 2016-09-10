@@ -2,7 +2,7 @@
 order: 1
 title: Hello World
 menu: Welcome
-icon: fa-book
+icon: ion-grid
 ---
 
 # Markdown Docs
@@ -16,13 +16,13 @@ we have a lot and components and you can customize it the way you want
 
 ## Why MDocs ?
 
-- ::: img /assets/images/markdown-white.png
+- :ion-android-create: 
   **Markdown**{.title}
   build you documentation easy with only writing markdown
-- :fa-desktop: 
+- :ion-ios-bookmarks-outline: 
   **Static Website**{.title}
   you can build a website in static html files ( angularjs version is coming soon )
-- :fa-pencil-square-o:
+- :ion-ios-settings-strong:
   **Easy Customization**{.title}
   we provide a lot of components that you can using easy in markdown
 - end

@@ -2,7 +2,7 @@ doctype html
 html(lang="en")
   head
     title= title
-    link(href='/assets/css/highlight.js/atom-one-dark.css', rel='stylesheet')
+    link(href='/assets/css/highlight.js/agate.css', rel='stylesheet')
     link(href='/assets/css/app.css', rel='stylesheet')
   body
     div(class='app')
@@ -15,7 +15,7 @@ html(lang="en")
             li(class= item.title == menu ? "active": "")
               if item.icon != undefined
                 a(href= item.url)
-                  i(class='fa ' + item.icon)
+                  i(class='icon fa ' + item.icon)
                   span= item.title
               else
                 a(href= item.url)= item.title

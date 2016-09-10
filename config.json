@@ -1,6 +1,7 @@
 {
   "fonts": {
-    "font-awesome": "node_modules/font-awesome/fonts/**/*"
+    "font-awesome": "node_modules/font-awesome/fonts/**/*",
+    "ionicons": "node_modules/ionicons/fonts/*"
   },
   "css": {
     "highlight.js": "node_modules/highlight.js/styles/**/*"
